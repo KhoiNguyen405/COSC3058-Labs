@@ -4,8 +4,8 @@ header, footer {
 
 main.flex-container {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    flex-wrap: wrap-reverse;
     align-items: center;
     justify-content: center;
 }
@@ -20,5 +20,21 @@ section.flex-item {
 }
 
 section.flex-item a {
+    color: black;
     text-decoration: none;
+}
+
+img.screenshot {
+    width: 95%;
+    height: 75%;
+    margin: 0 2.5%;
+    border-radius: 10px;
+}
+
+.html-lang {
+    color: orangered;
+}
+
+.css-lang {
+    color: purple;
 }
