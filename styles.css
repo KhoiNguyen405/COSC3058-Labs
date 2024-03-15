@@ -84,5 +84,10 @@ a.link-site {
     margin-top: 25px;
     padding: 5px;
     font-weight: bold;
+    transition: all 0.25s linear;
+}
+
+a.link-site:hover {
+    transform: scale(1.1);
 }
 
