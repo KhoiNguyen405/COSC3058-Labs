@@ -61,11 +61,11 @@ img.screenshot {
 }
 
 .html-lang {
-    color: orangered;
+    color: rgb(220, 59, 0);
 }
 
 .css-lang {
-    color: purple;
+    color: rgb(153, 18, 155);
 }
 
 section.flex-item p {
