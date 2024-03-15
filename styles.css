@@ -55,6 +55,7 @@ section.flex-item a {
 img.screenshot {
     width: 95%;
     height: 75%;
+    min-height: 200px;
     margin: 0 2.5%;
     border-radius: 10px;
 }
@@ -66,3 +67,22 @@ img.screenshot {
 .css-lang {
     color: purple;
 }
+
+section.flex-item p {
+    text-align: justify;
+}
+
+a.link-site {
+    display: flex;
+    width: 50%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgba(128, 75, 202, 0.75);
+    box-shadow: 0 0 10px rgb(106, 33, 208);
+    border-radius: 25px;
+    margin-top: 25px;
+    padding: 5px;
+    font-weight: bold;
+}
+
