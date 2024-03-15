@@ -1,0 +1,24 @@
+header, footer {
+    text-align: center;
+}
+
+main.flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+section.flex-item {
+    width: 40%;
+    height: 500px;
+    border: 2px solid red;
+    border-radius: 25px;
+    padding: 25px;
+    margin: 25px;
+}
+
+section.flex-item a {
+    text-decoration: none;
+}
