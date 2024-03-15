@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 1000px;
+}
+
+nav {
+    background-color: #FEAB00;
+    width: 15%;
+}
+
+main {
+    background-color: #FFD54F;
+    width: 65%;
+}
+
+aside {
+    background-color: #FFF275;
+    width: 20%;
+}
+
+#header-section {
+    background-color: #7FCBC4;
+    height: 20%;
+}
+
+#main-section {
+    display: flex;
+    flex-direction: row;
+    height: 70%;
+}
+
+#footer-section {
+    background-color: #29A69A;
+    height: 10%;
+}
+
+h1 {
+    padding: 10px;
+}
+
+article {
+    padding: 10px;
+}

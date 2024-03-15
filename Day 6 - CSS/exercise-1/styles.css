@@ -1,0 +1,16 @@
+/* YOUR STYLE GOES IN HERE */
+#board .row:nth-child(even) .square:nth-child(even) {
+    background-color: #779656;
+}
+
+#board .row:nth-child(even) .square:nth-child(odd) {
+    background-color: #EFEED2;
+}
+
+#board .row:nth-child(odd) .square:nth-child(even) {
+    background-color: #EFEED2;
+}
+
+#board .row:nth-child(odd) .square:nth-child(odd) {
+    background-color: #779656;
+}

@@ -1,0 +1,34 @@
+* {
+    font-size: 25px;
+}
+
+header {
+    background-color: #9ACC66;
+    padding-bottom: 100px;
+    margin-bottom: 10px;
+}
+
+#mainContent {
+    display: flex;
+    flex-direction: row;
+}
+
+nav {
+    background-color: #97D8FF;
+    width: 20%;
+    padding-bottom: 1000px;
+    margin-right: 1px;
+}
+
+#content {
+    background-color: #FFE6AA;
+    width: 80%;
+    padding-bottom: 1000px;
+    margin-left: 1px;
+}
+
+footer {
+    background-color: #9ACC66;
+    padding-bottom: 50px;
+    margin-top: 5px;
+}

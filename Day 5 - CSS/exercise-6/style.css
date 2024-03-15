@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: row;
+    height: 1000px;
+}
+
+#nav {
+    display: flex;
+    background-color: #B2DFDB;
+    width: 20%;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+main {
+    background-color: #DFF2F1;
+    height: 80%;
+}
+
+footer {
+    background-color: #7FCBC4;
+    height: 20%;
+}
+
+#main {
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    padding: 10px;
+}
+
+nav {
+    transform: rotate(90deg);
+}
+
+nav h1 {
+    padding: 50px;
+}
+
+article {
+    padding: 10px;
+}

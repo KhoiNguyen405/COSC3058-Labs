@@ -1,0 +1,80 @@
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    animation: bgColor 15s ease-in infinite; 
+}
+
+body>h1 {
+    color: rgb(255, 237, 255);
+    text-shadow: -5px 0 5px rgb(185, 5, 47);
+}
+
+h1#name {
+    font-family: 'Parisienne', cursive;
+}
+
+img#profile-picture {
+    border: 2px solid rgb(161, 25, 57);
+    border-radius: 100%;
+}
+
+.card-container {
+    font-family: 'Merienda', sans-serif;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-self: center;
+    text-align: center;
+    background-color: rgb(255, 237, 255);
+    border: 5px solid rgb(161, 25, 57);
+    border-radius: 15px;
+    padding: 25px;
+}
+
+@keyframes bgColor {
+    0%   { background: linear-gradient(217deg, rgba(55, 0, 255, 0.8), rgba(255,0,0,0) 70.71%),
+                    linear-gradient(127deg, rgba(187, 0, 255, 0.8), rgba(0,255,0,0) 70.71%),
+                    linear-gradient(336deg, rgba(0, 128, 255, 0.8), rgba(0,0,255,0) 70.71%); }
+    33%  { background: linear-gradient(336deg, rgba(0, 128, 255, 0.8), rgba(0,0,255,0) 70.71%),
+                linear-gradient(217deg, rgba(55, 0, 255, 0.8), rgba(255,0,0,0) 70.71%),
+                linear-gradient(127deg, rgba(187, 0, 255, 0.8), rgba(0,255,0,0) 70.71%); }
+    66%  { background: linear-gradient(127deg, rgba(187, 0, 255, 0.8), rgba(0,255,0,0) 70.71%),
+                linear-gradient(336deg, rgba(0, 128, 255, 0.8), rgba(0,0,255,0) 70.71%),
+                linear-gradient(217deg, rgba(55, 0, 255, 0.8), rgba(255,0,0,0) 70.71%); }
+    100% { background: linear-gradient(217deg, rgba(55, 0, 255, 0.8), rgba(255,0,0,0) 70.71%),
+        linear-gradient(127deg, rgba(187, 0, 255, 0.8), rgba(0,255,0,0) 70.71%),
+        linear-gradient(336deg, rgba(0, 128, 255, 0.8), rgba(0,0,255,0) 70.71%); }
+}
+
+.profile-info {
+    width: 85%;
+}
+
+.contact-container {
+    display: flex;
+    align-items: center;
+    width: 75%;
+    border: 2px solid rgb(161, 25, 57);
+    border-radius: 15px;
+    padding: 10px;
+    margin: 5px;
+    background-color: rgb(231, 113, 231, 0.5);
+}
+
+.contact-container a.contact-icon {
+    margin-left: 20px;
+}
+
+.contact-container a.contact-name {
+    color: rgb(6, 31, 144);
+    text-decoration: none;
+    width: 80%;
+}
+
