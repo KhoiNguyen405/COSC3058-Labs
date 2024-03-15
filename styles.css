@@ -39,7 +39,7 @@ main.flex-container {
 section.flex-item {
     background: linear-gradient(217deg, rgb(163, 163, 197), rgba(194, 194, 194, 0) 70.71%),
             linear-gradient(336deg, rgba(0, 128, 255, 0.8), rgba(0,0,255,0) 70.71%);
-    width: 22%;
+    width: 25%;
     height: auto;
     box-shadow: 0 0 10px rgb(128, 75, 202);
     border-radius: 25px;
@@ -68,8 +68,10 @@ img.screenshot {
     color: rgb(153, 18, 155);
 }
 
-section.flex-item p {
-    text-align: justify;
+div.link-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 a.link-site {
@@ -81,7 +83,7 @@ a.link-site {
     background-color: rgba(128, 75, 202, 0.75);
     box-shadow: 0 0 10px rgb(106, 33, 208);
     border-radius: 25px;
-    margin-top: 25px;
+    margin: 25px 10px 0px;
     padding: 5px;
     font-weight: bold;
     transition: all 0.25s linear;
