@@ -28,7 +28,7 @@ header {
     box-shadow: 0 0 10px rgb(128, 75, 202);
 }
 
-main.flex-container {
+main.main-container {
     display: flex;
     flex-direction: row-reverse;
     flex-wrap: wrap-reverse;
@@ -36,7 +36,7 @@ main.flex-container {
     justify-content: space-evenly;
 }
 
-section.flex-item {
+section.project-item {
     background: linear-gradient(217deg, rgb(163, 163, 197), rgba(194, 194, 194, 0) 70.71%),
             linear-gradient(336deg, rgba(0, 128, 255, 0.8), rgba(0,0,255,0) 70.71%);
     width: 25%;
@@ -47,7 +47,7 @@ section.flex-item {
     margin: 15px;
 }
 
-section.flex-item a {
+section.project-item a {
     color: black;
     text-decoration: none;
 }
