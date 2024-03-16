@@ -28,10 +28,10 @@ header {
     box-shadow: 0 0 10px rgb(128, 75, 202);
 }
 
-main.main-container {
+section.section-container {
     display: grid;
     grid-template-columns: 30% 30% 30%;
-    gap: 50px 10px;
+    gap: 30px 10px;
     align-items: start;
     justify-content: space-evenly;
     margin-top: 25px;
@@ -47,25 +47,14 @@ section.project-item {
     padding: 25px;
 }
 
-#personal-site {
-    grid-area: 1 / 1 / 2 / 2;
-}
-
-#ecommerce-site {
-    grid-area: 1 / 2 / 2 / 3;
-}
-
-#business-card {
-    grid-area: 1 / 3 / 2 / 4;
-}
-
-#updated-ecommerce-site {
-    grid-area: 2 / 1 / 3 / 2;
-}
-
 section.project-item a {
     color: black;
     text-decoration: none;
+}
+
+section.project-item>a h2 {
+    display: inline-block;
+    margin-bottom: 0;
 }
 
 img.screenshot {
@@ -74,14 +63,17 @@ img.screenshot {
     min-height: 200px;
     margin: 0 2.5%;
     border-radius: 10px;
+    transition: all 0.25s linear;
 }
 
 .html-lang {
     color: rgb(220, 59, 0);
+    font-weight: bolder;
 }
 
 .css-lang {
     color: rgb(153, 18, 155);
+    font-weight: bolder;
 }
 
 div.link-section {
@@ -95,7 +87,7 @@ a.link-site {
     width: 50%;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
     background-color: rgba(128, 75, 202, 0.75);
     box-shadow: 0 0 10px rgb(106, 33, 208);
     border-radius: 25px;
@@ -105,13 +97,13 @@ a.link-site {
     transition: all 0.25s linear;
 }
 
-a.link-site:hover {
+a.link-site:hover, img.screenshot:hover {
     transform: scale(1.1);
 }
 
 /* Responsive 1-column layout */
 @media only screen and (max-width: 768px) {
-    main.main-container {
+    section.section-container {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -119,7 +111,7 @@ a.link-site:hover {
     }
 
     section.project-item {
-        width: 75%;
+        width: calc(100% - 75px);
     }
 }
 
