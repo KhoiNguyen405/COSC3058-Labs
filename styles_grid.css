@@ -1,0 +1,95 @@
+html {
+    background-color: rgb(177, 210, 239);
+}
+
+body {
+    margin: 0;
+}
+
+header, footer {
+    text-align: center;
+}
+
+footer {
+    margin-top: 3%;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-div {
+    background: linear-gradient(to top, rgba(0, 128, 255, 0.8), rgba(255, 255, 255, 0) 70.71%);
+    width: 100%;
+    padding: 10px 100px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgb(128, 75, 202);
+}
+
+main.flex-container {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap-reverse;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+section.flex-item {
+    background: linear-gradient(217deg, rgb(163, 163, 197), rgba(194, 194, 194, 0) 70.71%),
+            linear-gradient(336deg, rgba(0, 128, 255, 0.8), rgba(0,0,255,0) 70.71%);
+    width: 25%;
+    height: auto;
+    box-shadow: 0 0 10px rgb(128, 75, 202);
+    border-radius: 25px;
+    padding: 25px;
+    margin: 15px;
+}
+
+section.flex-item a {
+    color: black;
+    text-decoration: none;
+}
+
+img.screenshot {
+    width: 95%;
+    height: 75%;
+    min-height: 200px;
+    margin: 0 2.5%;
+    border-radius: 10px;
+}
+
+.html-lang {
+    color: rgb(220, 59, 0);
+}
+
+.css-lang {
+    color: rgb(153, 18, 155);
+}
+
+div.link-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+a.link-site {
+    display: flex;
+    width: 50%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgba(128, 75, 202, 0.75);
+    box-shadow: 0 0 10px rgb(106, 33, 208);
+    border-radius: 25px;
+    margin: 25px 10px 0px;
+    padding: 5px;
+    font-weight: bold;
+    transition: all 0.25s linear;
+}
+
+a.link-site:hover {
+    transform: scale(1.1);
+}
+
