@@ -41,6 +41,12 @@ header div p {
     margin: 10px;
 }
 
+nav .mobile-nav-icon {
+    display: none;
+    color: white;
+    background-color: #E61E2A;
+    padding: 10px 15px;
+}
 
 nav ul {
     list-style-type: none;
@@ -106,4 +112,33 @@ div.product-listing>a {
     margin-left: 10px;
     font-style: italic;
     height: 25px;
+}
+
+/* Responsive layout for smaller screen */
+@media only screen and (max-width: 768px) {
+    header img {
+        display: block;
+        position: relative;
+        margin: 15px auto;
+        left: 0;
+        top: 0;
+    }
+
+    nav .mobile-nav-icon {
+        display: block;
+    }
+
+    nav .mobile-nav-icon:hover+ul, nav .mobile-nav-icon+ul:hover{
+        display: flex;
+        flex-direction: column;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    div.product-container {
+        grid-template-columns: 45% 45%;
+        height: auto;
+    }
 }
