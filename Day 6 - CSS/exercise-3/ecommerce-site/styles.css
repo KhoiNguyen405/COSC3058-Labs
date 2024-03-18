@@ -1,0 +1,57 @@
+:root {
+    --rmit-blue: #000054; 
+    --rmit-red: #E61E2A;
+}
+
+body {
+    background-color: aliceblue;
+    margin: 0;
+    font-size: 18px;
+}
+
+header {
+    background-color: aliceblue;
+    padding: 0px;
+    text-align: center;
+    font-size: 20px;
+}
+
+header img {
+    position: absolute;
+    left: 10px;
+    top: 15px;
+    width: 200px;
+    height: 50px;
+}
+
+header h1 {
+    color: var(--rmit-blue);
+    padding-top: 10px;
+    margin: 5px 0 0;
+}
+
+header div p {
+    display: inline-block;
+    color: white;
+    background-color: var(--rmit-red);
+    font-weight: bold;
+    font-style: italic;
+    padding: 10px;
+    margin: 10px;
+}
+
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    padding: 15px;
+    margin: 0;
+    background-color: #E61E2A;
+}
+
+nav li a {
+    color: white;
+    text-decoration: none;
+}
