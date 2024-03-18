@@ -52,7 +52,58 @@ nav ul {
     background-color: #E61E2A;
 }
 
-nav li a {
+header a, nav li a {
     color: white;
     text-decoration: none;
+}
+
+nav li a:hover {
+    text-decoration: underline;
+}
+
+main section {
+    margin: 15px 10px;
+}
+
+main section h1 {
+    color: var(--rmit-blue);
+    margin-top: 5px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+}
+
+div.product-container {
+    display: grid;
+    grid-template-columns: 24% 24% 24%;
+    gap: 10px;
+    height: 480px;
+}
+
+div.product-listing {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-self: center;
+    text-align: center;
+    height: 480px;
+}
+
+div.product-listing img {
+    width: 100%;
+    height: 100%;
+}
+
+div.product-listing>a {
+    height: 70%;
+}
+
+.out-of-stock {    
+    margin-bottom: 50px;
+}
+
+.out-of-stock .product-container {
+    display: block;
+    margin-left: 10px;
+    font-style: italic;
+    height: 25px;
 }
