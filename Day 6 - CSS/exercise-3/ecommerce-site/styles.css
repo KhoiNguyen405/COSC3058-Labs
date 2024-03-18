@@ -128,13 +128,13 @@ div.product-listing>a {
         display: block;
     }
 
+    nav ul {
+        display: none;
+    }
+
     nav .mobile-nav-icon:hover+ul, nav .mobile-nav-icon+ul:hover{
         display: flex;
         flex-direction: column;
-    }
-
-    nav ul {
-        display: none;
     }
 
     div.product-container {
