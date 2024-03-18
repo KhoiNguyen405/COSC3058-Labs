@@ -5,109 +5,108 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="assets/images/rmit-favicon.png" type="image/png">
+    <link rel="stylesheet" href="styles.css">
     <title>Order - Cheap Textbooks</title>
 </head>
 
 <body>
-    <center>
-        <header>
-            <!-- Header Section -->
-            <header>
-                <a href="index.html">
-                    <img src="assets/images/rmit-store-logo.png" alt="Store Icon" height="100">
-                </a>
-                <h1>
-                    Textbook Store
-                </h1>
-                <div>
-                    <strong><em>Your One-Stop Shop for Cheap Textbooks</em></strong>
-                </div>
-            </header>
+    <!-- Header Section -->
+    <header>
+        <a href="index.html">
+            <img src="assets/images/rmit-store-logo.png" alt="Store Icon" height="100">
+        </a>
+
+        <div>
+            <a href="index.html">
+                <h1>Textbook Store</h1>
+            </a>
+            <p>Your One-Stop Shop for Cheap Textbooks</p>
+        </div>
+    </header>
+
+    <!-- Nav Links Section -->
+    <nav>
+        <div class="mobile-nav-icon">☰</div>
+        <ul>
+            <li><a href="#english">English</a></li>
+            <li><a href="#business">Business</a></li>
+            <li><a href="#psych">Psychology</a></li>
+            <li><a href="#math">Mathematics</a></li>
+            <li><a href="#cs-it">CS/IT</a></li>
+            <li><a href="order.html">Buy now!</a></li>
+        </ul>
+    </nav>
+
+    <!-- Product Order Section -->
+    <main>
+        <h2>Order Form</h2>
+
+        <form method="post" action="" style="width: 40%">
+            <!-- Order Info -->
+            <fieldset>
+                <legend>Order Information</legend>
+
+                <label for="order">Select product(s):</label>
+                <select id="order" multiple>
+                    <option value="british-literature-the-20th-century">British Literature: The 20th Century</option>
+                    <option value="british-literature-the-19th-century">British Literature: The 19th Century</option>
+                    <option value="history-english-literature-philology">History of English Literature and Philology - A
+                        Guide</option>
+                    <option value="fundamentals-of-business">Fundamentals of Business</option>
+                    <option value="the-business-book">The Business Book</option>
+                    <option value="linear-algebra">Linear Algebra</option>
+                    <option value="abstract-algebra">Abstract Algebra - A Comprehensive Introduction</option>
+                    <option value="intro-proofs-proof-strategies">Introduction to Proofs and Proof Strategies</option>
+                    <option value="matrix-mathematics">Matrix Mathematics</option>
+                    <option value="computer-vision-modern-approach">Computer Vision: A Modern Approach</option>
+                    <option value="computer-vision-algorithms-applications">Computer Vision: Algorithms and Applications
+                    </option>
+                </select>
+            </fieldset>
             <br>
 
-            <!-- Nav Links Section -->
-            <nav>
-                <a href="index.html#english">English</a> |
-                <a href="index.html#business">Business</a> |
-                <a href="index.html#psych">Psychology</a> |
-                <a href="index.html#math">Mathematics</a> |
-                <a href="index.html#cs-it">CS/IT</a> |
-                <a href="order.html">Buy now!</a>
-            </nav>
+            <!-- Customer Info -->
+            <fieldset>
+                <legend>Customer Information</legend>
+
+                <label for="fname">First Name:</label>
+                <input id="fname" type="text" required>
+                <br><br>
+
+                <label for="lname">Last Name:</label>
+                <input id="lname" type="text" required>
+                <br><br>
+
+                <label for="email">Email Address:</label>
+                <input id="email" type="text" required>
+            </fieldset>
             <br>
-            <hr>
-        </header>
 
-        <!-- Product Order Section -->
-        <main>
-            <h2>Order Form</h2>
+            <!-- Shipping Info -->
+            <fieldset>
+                <legend>Shipping Details</legend>
 
-            <form method="post" action="" style="width: 40%">
-                <!-- Order Info -->
-                <fieldset>
-                    <legend>Order Information</legend>
+                <label for="address">Address:</label>
+                <input id="address" type="text" required>
+                <br><br>
 
-                    <label for="order">Select product(s):</label>
-                    <select id="order" multiple>
-                        <option value="british-literature-the-20th-century">British Literature: The 20th Century</option>
-                        <option value="british-literature-the-19th-century">British Literature: The 19th Century</option>
-                        <option value="history-english-literature-philology">History of English Literature and Philology - A Guide</option>
-                        <option value="fundamentals-of-business">Fundamentals of Business</option>
-                        <option value="the-business-book">The Business Book</option>
-                        <option value="linear-algebra">Linear Algebra</option>
-                        <option value="abstract-algebra">Abstract Algebra - A Comprehensive Introduction</option>
-                        <option value="intro-proofs-proof-strategies">Introduction to Proofs and Proof Strategies</option>
-                        <option value="matrix-mathematics">Matrix Mathematics</option>
-                        <option value="computer-vision-modern-approach">Computer Vision: A Modern Approach</option>
-                        <option value="computer-vision-algorithms-applications">Computer Vision: Algorithms and Applications</option>
-                    </select>
-                </fieldset>
-                <br>
+                <label for="district">District:</label>
+                <input id="district" type="text" required>
+                <br><br>
 
-                <!-- Customer Info -->
-                <fieldset>
-                    <legend>Customer Information</legend>
+                <label for="city">City:</label>
+                <input id="city" type="text" required>
+                <br><br>
 
-                    <label for="fname">First Name:</label>
-                    <input id="fname" type="text" required>
-                    <br><br>
+                <label for="phone">Phone Number:</label>
+                <input id="phone" type="tel" required>
+                <br><br>
+            </fieldset>
+            <br>
 
-                    <label for="lname">Last Name:</label>
-                    <input id="lname" type="text" required>
-                    <br><br>
-
-                    <label for="email">Email Address:</label>
-                    <input id="email" type="text" required>
-                </fieldset>
-                <br>
-
-                <!-- Shipping Info -->
-                <fieldset>
-                    <legend>Shipping Details</legend>
-
-                    <label for="address">Address:</label>
-                    <input id="address" type="text" required>
-                    <br><br>
-
-                    <label for="district">District:</label>
-                    <input id="district" type="text" required>
-                    <br><br>
-
-                    <label for="city">City:</label>
-                    <input id="city" type="text" required>
-                    <br><br>
-
-                    <label for="phone">Phone Number:</label>
-                    <input id="phone" type="tel" required>
-                    <br><br>
-                </fieldset>
-                <br>
-
-                <input type="submit" value="Order Now!">
-            </form>
-        </main>
-    </center>
-
+            <input type="submit" value="Order Now!">
+        </form>
+    </main>
 </body>
 
 </html>
