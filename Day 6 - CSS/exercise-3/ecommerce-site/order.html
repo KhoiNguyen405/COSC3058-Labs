@@ -26,7 +26,9 @@
 
     <!-- Nav Links Section -->
     <nav>
-        <div class="mobile-nav-icon">☰</div>
+        <div class="mobile-nav-icon">
+            <span class="nav-icon">☰</span>
+        </div>
         <ul>
             <li><a href="#english">English</a></li>
             <li><a href="#business">Business</a></li>
@@ -39,108 +41,113 @@
 
     <!-- Product Order Section -->
     <main>
-        <section id="order-form">
+        <section id="order-section">
             <h1>Order Form</h1>
 
-            <form method="post" action="" style="width: 40%">
-                <!-- Order Info -->
-                <fieldset id="order-info">
-                    <legend>Order Information</legend>
+            <form id="purchase-order" method="get" action="">
+                <div id="order-form">
+                    <!-- Order Info -->
+                    <fieldset id="order-info">
+                        <legend>Order Information</legend>
 
-                    <div class="select-list">
-                        <label for="order">Select product(s):</label>
-                        <select id="order" multiple>
-                            <option value="british-literature-the-20th-century">
-                                British Literature: The 20th Century
-                            </option>
-                            <option value="british-literature-the-19th-century">
-                                British Literature: The 19th Century
-                            </option>
-                            <option value="history-english-literature-philology">
-                                History of English Literature and Philology - A Guide
-                            </option>
-                            <option value="fundamentals-of-business">
-                                Fundamentals of Business
-                            </option>
-                            <option value="the-business-book">
-                                The Business Book
-                            </option>
-                        </select>
-                    </div>
-                </fieldset>
+                        <div class="select-list">
+                            <label for="order">Select product(s)</label>
+                            <select id="order" multiple>
+                                <option value="british-literature-the-20th-century">
+                                    British Literature: The 20th Century
+                                </option>
+                                <option value="british-literature-the-19th-century">
+                                    British Literature: The 19th Century
+                                </option>
+                                <option value="history-english-literature-philology">
+                                    History of English Literature and Philology - A Guide
+                                </option>
+                                <option value="fundamentals-of-business">
+                                    Fundamentals of Business
+                                </option>
+                                <option value="the-business-book">
+                                    The Business Book
+                                </option>
+                            </select>
+                        </div>
+                    </fieldset>
 
-                <!-- Customer Info -->
-                <fieldset>
-                    <legend>Customer Information</legend>
+                    <!-- Customer Info -->
+                    <fieldset id="customer-info">
+                        <legend>Customer Information</legend>
 
-                    <div class="input-field">
-                        <label for="fname">First Name:</label>
-                        <input id="fname" type="text" required>
-                    </div>
+                        <div class="input-field">
+                            <label for="fname">First Name</label>
+                            <input id="fname" type="text" required>
+                        </div>
 
-                    <div class="input-field">
-                        <label for="lname">Last Name:</label>
-                        <input id="lname" type="text" required>
-                    </div>
+                        <div class="input-field">
+                            <label for="lname">Last Name</label>
+                            <input id="lname" type="text" required>
+                        </div>
 
-                    <div class="input-field">
-                        <label for="email">Email Address:</label>
-                        <input id="email" type="text" required>
-                    </div>
-                </fieldset>
+                        <div class="input-field">
+                            <label for="email">Email Address</label>
+                            <input id="email" type="text" required>
+                        </div>
+                    </fieldset>
 
-                <!-- Shipping Info -->
-                <fieldset>
-                    <legend>Shipping Details</legend>
+                    <!-- Shipping Info -->
+                    <fieldset id="shipping-details">
+                        <legend>Shipping Details</legend>
 
-                    <div class="input-field">
-                        <label for="address">Address:</label>
-                        <input id="address" type="text" required>
-                    </div class="input-field">
+                        <div class="input-field">
+                            <label for="address">Address</label>
+                            <input id="address" type="text" required>
+                        </div class="input-field">
 
-                    <div>
-                        <label for="district">District:</label>
-                        <input id="district" type="text" required>
-                    </div>
+                        <div class="input-field">
+                            <label for="district">District</label>
+                            <input id="district" type="text" required>
+                        </div>
 
-                    <div class="input-field">
-                        <label for="city">City:</label>
-                        <input id="city" type="text" required>
-                    </div>
+                        <div class="input-field">
+                            <label for="city">City</label>
+                            <input id="city" type="text" required>
+                        </div>
 
-                    <div class="input-field">
-                        <label for="phone">Phone Number:</label>
-                        <input id="phone" type="tel" required>
-                    </div>
-                </fieldset>
+                        <div class="input-field">
+                            <label for="phone">Phone Number</label>
+                            <input id="phone" type="tel" required>
+                        </div>
+                    </fieldset>
 
-                <!-- Payment method -->
-                <fieldset>
-                    <legend>Payment Method</legend>
+                    <!-- Payment method -->
+                    <fieldset id="payment-method">
+                        <legend>Payment Method</legend>
 
-                    <div>
-                        <input type="radio" id="debit-card" name="payment-method" value="debit-card" required>
-                        <label for="debit-card">Debit Card</label>
-                    </div>
+                        <div class="payment-options">
+                            <div>
+                                <input type="radio" id="debit-card" name="payment-method" value="debit-card" required>
+                                <label for="debit-card">Debit Card</label>
+                            </div>
+    
+                            <div>
+                                <input type="radio" id="credit-card" name="payment-method" value="credit-card" required>
+                                <label for="credit-card">Credit Card</label>
+                            </div>
+    
+                            <div>
+                                <input type="radio" id="qr-pay" name="payment-method" value="qr-pay" required>
+                                <label for="qr-pay">QR Pay</label>
+                            </div>
+    
+                            <div>
+                                <input type="radio" id="cash" name="payment-method" value="cash" required>
+                                <label for="cash">Cash</label>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
 
-                    <div>
-                        <input type="radio" id="credit-card" name="payment-method" value="credit-card" required>
-                        <label for="credit-card">Credit Card</label>
-                    </div>
-
-                    <div>
-                        <input type="radio" id="qr-pay" name="payment-method" value="qr-pay" required>
-                        <label for="qr-pay">QR Pay</label>
-                    </div>
-
-                    <div>
-                        <input type="radio" id="cash" name="payment-method" value="cash" required>
-                        <label for="cash">Cash</label>
-                    </div>
-                </fieldset>
-
+                <!-- Submit Order Button -->
                 <div class="submit-field">
-                    <input type="submit" value="Order Now!">
+                    <button type="submit" form="purchase-order">Order Now!</button>
                 </div>
             </form>
         </section>

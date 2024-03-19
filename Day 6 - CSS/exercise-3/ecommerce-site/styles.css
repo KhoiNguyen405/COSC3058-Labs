@@ -50,6 +50,10 @@ nav .mobile-nav-icon {
     padding: 10px 15px;
 }
 
+.nav-icon:hover {
+    cursor: pointer;
+}
+
 nav ul {
     list-style-type: none;
     display: flex;
@@ -117,6 +121,111 @@ div.product-listing>a {
     height: 25px;
 }
 
+#order-section {
+    margin-bottom: 50px;
+}
+
+#order-section h1 {
+    margin: 15px;
+}
+
+#order-form {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: 
+        "customer order"
+        "shipping ."
+        "payment .";
+    gap: 15px;
+    margin: 15px;
+}
+
+#order-info {
+    grid-area: order;
+}
+
+#customer-info {
+    grid-area: customer;
+}
+
+#shipping-details {
+    grid-area: shipping;
+}
+
+#payment-method {
+    grid-area: payment;
+}
+
+fieldset {
+    background-color: white;
+    border-radius: 10px;
+}
+
+fieldset legend {
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.input-field {
+    display: grid;
+    grid-template-columns: 25% 75%;
+    margin: 10px;
+}
+
+.input-field label {
+    text-align: right;
+    margin-right: 20px;
+}
+
+.input-field input {
+    width: 100%;
+    height: 20px;
+}
+
+.select-list label {
+    display: block;
+    margin-bottom: 10px;
+    margin-left: 5px;
+}
+
+.select-list select {
+    display: inline-block;
+    width: 100%;
+    margin: 5px 0;
+}
+
+.payment-options {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-bottom: 10px;
+}
+
+.payment-options input:hover, .payment-options div:hover, .payment-options label:hover {
+    cursor: pointer;
+}
+
+.submit-field {
+    margin-top: 25px; 
+    margin-left: 20px;
+}
+
+button[type="submit"] {
+    color: white;
+    background-color: var(--rmit-red);
+    width: 150px;
+    height: 30px;
+    border-radius: 10px;
+    border: 0;
+    font-weight: bold;
+}
+
+button[type="submit"]:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    border: 3px solid rgba(0, 0, 0, 0.75)
+}
+
 /* Responsive layout for smaller screen */
 @media only screen and (max-width: 768px) {
     header img {
@@ -143,5 +252,11 @@ div.product-listing>a {
     div.product-container {
         grid-template-columns: 45% 45%;
         height: auto;
+    }
+
+    #order-form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
     }
 }
