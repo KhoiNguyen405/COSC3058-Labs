@@ -39,73 +39,74 @@
 
     <!-- Product Order Section -->
     <main>
-        <h2>Order Form</h2>
+        <section id="order-form">
+            <h1>Order Form</h1>
 
-        <form method="post" action="" style="width: 40%">
-            <!-- Order Info -->
-            <fieldset>
-                <legend>Order Information</legend>
-
-                <label for="order">Select product(s):</label>
-                <select id="order" multiple>
-                    <option value="british-literature-the-20th-century">British Literature: The 20th Century</option>
-                    <option value="british-literature-the-19th-century">British Literature: The 19th Century</option>
-                    <option value="history-english-literature-philology">History of English Literature and Philology - A
-                        Guide</option>
-                    <option value="fundamentals-of-business">Fundamentals of Business</option>
-                    <option value="the-business-book">The Business Book</option>
-                    <option value="linear-algebra">Linear Algebra</option>
-                    <option value="abstract-algebra">Abstract Algebra - A Comprehensive Introduction</option>
-                    <option value="intro-proofs-proof-strategies">Introduction to Proofs and Proof Strategies</option>
-                    <option value="matrix-mathematics">Matrix Mathematics</option>
-                    <option value="computer-vision-modern-approach">Computer Vision: A Modern Approach</option>
-                    <option value="computer-vision-algorithms-applications">Computer Vision: Algorithms and Applications
-                    </option>
-                </select>
-            </fieldset>
-            <br>
-
-            <!-- Customer Info -->
-            <fieldset>
-                <legend>Customer Information</legend>
-
-                <label for="fname">First Name:</label>
-                <input id="fname" type="text" required>
-                <br><br>
-
-                <label for="lname">Last Name:</label>
-                <input id="lname" type="text" required>
-                <br><br>
-
-                <label for="email">Email Address:</label>
-                <input id="email" type="text" required>
-            </fieldset>
-            <br>
-
-            <!-- Shipping Info -->
-            <fieldset>
-                <legend>Shipping Details</legend>
-
-                <label for="address">Address:</label>
-                <input id="address" type="text" required>
-                <br><br>
-
-                <label for="district">District:</label>
-                <input id="district" type="text" required>
-                <br><br>
-
-                <label for="city">City:</label>
-                <input id="city" type="text" required>
-                <br><br>
-
-                <label for="phone">Phone Number:</label>
-                <input id="phone" type="tel" required>
-                <br><br>
-            </fieldset>
-            <br>
-
-            <input type="submit" value="Order Now!">
-        </form>
+            <form method="post" action="" style="width: 40%">
+                <!-- Order Info -->
+                <fieldset>
+                    <legend>Order Information</legend>
+    
+                    <label for="order">Select product(s):</label>
+                    <select id="order" multiple>
+                        <option value="british-literature-the-20th-century">
+                            British Literature: The 20th Century
+                        </option>
+                        <option value="british-literature-the-19th-century">
+                            British Literature: The 19th Century
+                        </option>
+                        <option value="history-english-literature-philology">
+                            History of English Literature and Philology - A Guide
+                        </option>
+                        <option value="fundamentals-of-business">
+                            Fundamentals of Business
+                        </option>
+                        <option value="the-business-book">
+                            The Business Book
+                        </option>
+                    </select>
+                </fieldset>
+    
+                <!-- Customer Info -->
+                <fieldset>
+                    <legend>Customer Information</legend>
+    
+                    <label for="fname">First Name:</label>
+                    <input id="fname" type="text" required>
+                    <br><br>
+    
+                    <label for="lname">Last Name:</label>
+                    <input id="lname" type="text" required>
+                    <br><br>
+    
+                    <label for="email">Email Address:</label>
+                    <input id="email" type="text" required>
+                </fieldset>
+    
+                <!-- Shipping Info -->
+                <fieldset>
+                    <legend>Shipping Details</legend>
+    
+                    <label for="address">Address:</label>
+                    <input id="address" type="text" required>
+                    <br><br>
+    
+                    <label for="district">District:</label>
+                    <input id="district" type="text" required>
+                    <br><br>
+    
+                    <label for="city">City:</label>
+                    <input id="city" type="text" required>
+                    <br><br>
+    
+                    <label for="phone">Phone Number:</label>
+                    <input id="phone" type="tel" required>
+                    <br><br>
+                </fieldset>
+    
+                <input type="submit" value="Order Now!">
+            </form>
+        </section>
     </main>
 </body>
 
