@@ -139,9 +139,9 @@ function playGame(house, player) {
     }
     
     // Display final results
-    if (thePlayer.money == 0) {
+    if (thePlayer.money <= 0) {
         console.log("You have lost all of your money... Better luck next time!");
-    } else if (theHouse.money == 0) {
+    } else if (theHouse.money <= 0) {
         console.log("You won all of the house's money! Congratulations!");
     } else {
         console.log("Good game!");
