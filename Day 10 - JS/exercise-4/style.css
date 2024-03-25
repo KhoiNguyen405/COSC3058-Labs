@@ -18,3 +18,8 @@
     -8px -8px 0 firebrick,
     -30px 20px 40px dimgrey;
 }
+
+.trash {
+  cursor: pointer;
+  padding-left: 8px;
+}
