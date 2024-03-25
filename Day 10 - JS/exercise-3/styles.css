@@ -4,5 +4,6 @@ ul li{
 
 .completed {
     /* Add your own styles here */
-    
+    color: gray;
+    text-decoration: line-through;
 }
