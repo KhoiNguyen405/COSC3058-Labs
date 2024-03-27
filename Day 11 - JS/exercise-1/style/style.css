@@ -5,6 +5,7 @@ div#pattern {
 }
 
 button{
+    cursor: pointer;
     background: #4B0082;
     border: 0;
     color: white;
