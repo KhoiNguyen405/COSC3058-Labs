@@ -6,8 +6,25 @@ document.addEventListener("DOMContentLoaded", function () {
     const copyright = document.querySelectorAll(".copyright");
     const dobSelector = document.querySelector("input#dob");
 
+    // Form fields //
+    // Required fields
+    const fname = document.querySelector("input#fname");
+    const lname = document.querySelector("input#lname");
+    const email = document.querySelector("input#email");
+    const username = document.querySelector("input#username");
+    const password = document.querySelector("input#password");
+    const pwConfirm = document.querySelector("input#pw-confirm");
+    const content = document.querySelectorAll("input[type='checkbox']");
+    const contentField = document.querySelector("fieldset#content-select");
+
+    // Optional fields
+    const dob = document.querySelector("input#dob");
+    const gender = document.querySelectorAll("input[name='gender']");
+    const phone = document.querySelector("input#phone-num");
+
     console.log("Script start");
 
+    /***** General functions to perform on DOMContentLoad *****/
     // Fill in copyright information
     for (let cpHeader of copyright) {
         cpHeader.innerHTML = "&copy; By Nguyen Hoang Anh Khoi @ RMIT Vietnam 2024";
@@ -16,6 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Set min and max for date of birth selector
     dobSelector.setAttribute("min", "1900-01-01");
     dobSelector.setAttribute("max", getCurrentDate());
+
 
     /**********  Event Handlers **********/
     // Event handler for Nav links
@@ -40,7 +58,6 @@ document.addEventListener("DOMContentLoaded", function () {
     activityChoose.addEventListener("click", displayActivity);
 
 
-
     /**********  Helper Functions **********/
     // Helper function to handle Subscribe form
     function handleSubForm(event) {
@@ -55,20 +72,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Helper function to validate user inputs in Subscribe form
     function validateSubForm(event) {
-        // Required fields
-        const fname = document.querySelector("input#fname");
-        const lname = document.querySelector("input#lname");
-        const email = document.querySelector("input#email");
-        const username = document.querySelector("input#username");
-        const password = document.querySelector("input#password");
-        const pwConfirm = document.querySelector("input#pw-confirm");
-        const content = document.querySelectorAll("input[type='checkbox']");
-        const contentField = document.querySelector("fieldset#content-select");
-
-        // Optional fields
-        const dob = document.querySelector("input#dob");
-        const gender = document.querySelectorAll("input[name='gender']");
-        const phone = document.querySelector("input#phone-num");
+        // Prevent default action
+        event.preventDefault();
 
         // Check fname and lname //
         if (fname.value.trim().length == 0) {
@@ -152,7 +157,15 @@ document.addEventListener("DOMContentLoaded", function () {
             contentField.classList.remove("error");
         }
 
-        event.preventDefault();
+        // Display validation result
+        displayValidationResult();
+    }
+
+    // Helper function to display form validation result
+    function displayValidationResult() {
+        // Case: form has error
+
+        // Case: form has no error
     }
 
     // Helper function to display chosen activity
@@ -197,7 +210,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         }
     }
-    
+
     // Helper function to get current date in 'yyyy-mm-dd' format
     function getCurrentDate() {
         const date = new Date();
