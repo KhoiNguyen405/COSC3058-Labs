@@ -41,6 +41,9 @@ a {
     text-decoration: none;
 }
 
+/*                              */
+/* Styling for nav link section */
+/*                              */
 .nav-links {
     display: flex;
     flex-direction: row;
@@ -74,10 +77,14 @@ a {
     background-color: rgb(44, 44, 44);
 }
 
+/*                              */
+/*   Styling for main section   */
+/*                              */
 main h1 {
     text-align: center;
 }
 
+/* Activity Choosing section */
 #choose-container {
     display: grid;
     grid-template-columns: 33% 33% 33%;
@@ -101,8 +108,9 @@ main h1 {
     border-color: rgba(0,0,0,1);
 }
 
+/* Activity section */
 #html-exe, #css-exe, #js-exe {
-    display: none; /* No display by default */
+    display: none;   /* Not displayed by default */
 }
 
 .activity-container {
@@ -112,8 +120,9 @@ main h1 {
     background-color: lightgrey;
 }
 
+/* Subscribe form section */
 #sub-form {
-    display: none; /* No display by default */
+    display: none;   /* Not displayed by default */
     width: 50%;
     height: 500px;
     margin: 0 auto;
@@ -123,10 +132,17 @@ main h1 {
     border: 5px solid rgb(0,0,0);
 }
 
+input[type="text"], input[type="email"], input[type="password"], input[type="tel"] {
+    width: 150px;
+}
+
 #other-occupation {
     display: none;
 }
 
+/*                              */
+/*  Styling for footer section  */
+/*                              */
 footer {
     text-align: center;
     background-color: var(--div-bg-color);
