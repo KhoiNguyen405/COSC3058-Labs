@@ -4,17 +4,22 @@ document.addEventListener("DOMContentLoaded", function () {
     const subscribeSection = document.querySelector("#sub-form");
     const activityChoose = document.querySelector("#choose-exe");
     const copyright = document.querySelectorAll(".copyright");
+    const dobSelector = document.querySelector("input#dob");
 
-    console.log("Running");
+    console.log("Script start");
 
     // Fill in copyright information
     for (let cpHeader of copyright) {
         cpHeader.innerHTML = "&copy; By Nguyen Hoang Anh Khoi @ RMIT Vietnam 2024";
     }
 
+    // Set min and max for date of birth selector
+    dobSelector.setAttribute("min", "1900-01-01");
+    dobSelector.setAttribute("max", getCurrentDate());
+
     /**********  Event Handlers **********/
     // Event handler for Nav links
-    navLinks.addEventListener("click", function(event) {
+    navLinks.addEventListener("click", function (event) {
         if (event.target.classList.contains("subscribe")) {
             // Case: Subscribe link
             subscribeSection.style.display = "block";
@@ -30,18 +35,30 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Event handler for Subscribe form
     subscribeSection.addEventListener("click", handleSubForm);
-    
+
     // Event handler for Choose Activity section
     activityChoose.addEventListener("click", displayActivity);
 
 
 
     /**********  Helper Functions **********/
+    // Helper function to get current date in 'yyyy-mm-dd' format
+    function getCurrentDate() {
+        const date = new Date();
+        let currYear = date.getFullYear();
+        let currMonth = date.getMonth() + 1;
+        currMonth = currMonth < 10 ? `0${currMonth}` : currMonth;
+        let currDay = date.getDate();
+
+        return `${currYear}-${currMonth}-${currDay}`;
+    }
+
+
     // Helper function to handle Subscribe form
     function handleSubForm(event) {
         if (event.target.id === "close-sub-form") {
             subscribeSection.style.display = "none";
-        } 
+        }
 
         if (event.target.id === "submit-form") {
             validateSubForm();

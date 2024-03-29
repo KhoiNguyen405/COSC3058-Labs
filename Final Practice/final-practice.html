@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="style/style.css">
     <title>Final Programming Challenge Practice</title>
 </head>
+
 <body>
     <!-- Header section -->
     <header>
@@ -37,36 +39,38 @@
             <h1>Subscribe now!</h1>
 
             <form id="subscribe">
-                <div>
-                    <label for="fname">First Name</label>
-                    <input type="text" id="fname" name="fname">
-                </div>
+                <div id="basic-fields">
+                    <div id="first-name" class="labeled-input">
+                        <label for="fname">First Name</label>
+                        <input type="text" id="fname" name="fname">
+                    </div>
 
-                <div>
-                    <label for="lname">Last Name</label>
-                    <input type="text" id="lname" name="lname">
-                </div>
-                
-                <div>
-                    <label for="email">Email Address</label>
-                    <input type="email" id="email" name="email">
+                    <div id="last-name" class="labeled-input">
+                        <label for="lname">Last Name</label>
+                        <input type="text" id="lname" name="lname">
+                    </div>
+
+                    <div id="email-field" class="labeled-input">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email">
+                    </div>
                 </div>
 
                 <div id="account-fields">
                     <fieldset>
                         <legend>User Account</legend>
 
-                        <div>
+                        <div class="labeled-input">
                             <label for="username">Username</label>
                             <input type="text" id="username" name="username" maxlength="10">
                         </div>
 
-                        <div>
+                        <div class="labeled-input">
                             <label for="password">Password</label>
                             <input type="password" id="password" nane="password">
                         </div>
 
-                        <div>
+                        <div class="labeled-input">
                             <label for="pw-confirm">Confirm Password</label>
                             <input type="password" id="pw-confirm" name="pw-confirm">
                         </div>
@@ -77,12 +81,20 @@
                     <fieldset>
                         <legend>Content to Subscribe</legend>
 
-                        <input type="checkbox" id="html-check" name="content">
-                        <label for="html-check"><span class="html-lang">HTML</span></label>
-                        <input type="checkbox" id="css-check" name="content">
-                        <label for="css-check"><span class="css-lang">CSS</span></label>
-                        <input type="checkbox" id="js-check" name="content">
-                        <label for="js-check"><span class="js-lang">JavaScript</span></label>
+                        <div class="multi-option">
+                            <div>
+                                <input type="checkbox" id="html-check" name="content">
+                                <label for="html-check"><span class="html-lang">HTML</span></label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="css-check" name="content">
+                                <label for="css-check"><span class="css-lang">CSS</span></label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="js-check" name="content">
+                                <label for="js-check"><span class="js-lang">JavaScript</span></label>
+                            </div>
+                        </div>
                     </fieldset>
                 </div>
 
@@ -90,25 +102,33 @@
                     <fieldset>
                         <legend>Optional Fields</legend>
 
-                        <div>
-                            <label for="age">Age</label>
-                            <input type="text" id="age" name="age">
+                        <div class="labeled-input">
+                            <label for="dob">Date of Birth</label>
+                            <input type="date" id="dob" name="dob">
                         </div>
 
                         <div>
                             <fieldset>
                                 <legend>Gender</legend>
-        
-                                <input type="radio" id="male" name="gender">
-                                <label for="male">Male</label>
-                                <input type="radio" id="female" name="gender">
-                                <label for="female">Female</label>
-                                <input type="radio" id="other" name="gender">
-                                <label for="other">Other</label>
+
+                                <div class="multi-option">
+                                    <div>
+                                        <input type="radio" id="male" name="gender">
+                                        <label for="male">Male</label>
+                                    </div>
+                                    <div>
+                                        <input type="radio" id="female" name="gender">
+                                        <label for="female">Female</label>
+                                    </div>
+                                    <div>
+                                        <input type="radio" id="other" name="gender">
+                                        <label for="other">Other</label>
+                                    </div>
+                                </div>
                             </fieldset>
                         </div>
 
-                        <div>
+                        <div class="labeled-input">
                             <label for="occupation-list">Occupation</label>
                             <select id="occupation-list">
                                 <option>Select Occupation</option>
@@ -122,12 +142,12 @@
                             </select>
                         </div>
 
-                        <div id="other-occupation">
+                        <div id="other-occupation" class="labeled-input">
                             <label for="other-occ">If other, please specify</label>
                             <input type="text" id="other-occ" name="other-occ">
                         </div>
 
-                        <div>
+                        <div class="labeled-input">
                             <label for="phone-num">Phone</label>
                             <input type="tel" id="phone-num" name="phone-num">
                         </div>
@@ -173,7 +193,7 @@
         <!-- JS Activity -->
         <section id="js-exe">
             <h1><span class="js-lang">JavaScript</span> Exercise</h1>
-            
+
             <div class="activity-container"></div>
         </section>
     </main>
@@ -186,7 +206,8 @@
 
         <h4 class="copyright">Placeholder &copy;</h4> <!-- Copyright header text to be filled with JavaScript -->
     </footer>
-    
+
     <script src="script/script.js"></script>
 </body>
+
 </html>
