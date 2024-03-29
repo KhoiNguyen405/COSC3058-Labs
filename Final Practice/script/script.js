@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
+    // Useful DOM element selectors //
     const navLinks = document.querySelector(".nav-links")
     const mainSection = document.querySelector("main");
     const subscribeSection = document.querySelector("#sub-form");
@@ -6,8 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const copyright = document.querySelectorAll(".copyright");
     const dobSelector = document.querySelector("input#dob");
 
-    // Form fields //
-    // Required fields
+    // Required form fields //
     const fname = document.querySelector("input#fname");
     const lname = document.querySelector("input#lname");
     const email = document.querySelector("input#email");
@@ -16,11 +16,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const pwConfirm = document.querySelector("input#pw-confirm");
     const content = document.querySelectorAll("input[type='checkbox']");
     const contentField = document.querySelector("fieldset#content-select");
-
-    // Optional fields
-    const dob = document.querySelector("input#dob");
-    const gender = document.querySelectorAll("input[name='gender']");
-    const phone = document.querySelector("input#phone-num");
 
     console.log("Script start");
 
