@@ -130,14 +130,15 @@ main h1 {
     width: 50%;
     height: auto;
     margin: 0 auto;
-    padding: 10px 10px 25px 10px;
+    padding: 10px 10px 15px 10px;
     color: rgb(0,0,0);
     background-color: lightgrey;
     border: 5px solid rgb(0,0,0);
 }
 
 #sub-form div {
-    padding: 5px 0px;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 #basic-fields {
@@ -162,6 +163,11 @@ input[type="date"] {
     justify-content: space-evenly;
 }
 
+fieldset {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
 legend {
     font-weight: bold;
 }
@@ -171,8 +177,26 @@ select {
     height: 26px;
 }
 
-#other-occupation {
-    display: none;   /* Not displayed by default */
+#buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+button {
+    width: 100px;
+    height: 30px;
+}
+
+#submit-form {
+    font-weight: bold;
+    color: white;
+    background-color: rgb(225, 25, 25);
+    border-radius: 2px;
+}
+
+#submit-form:hover {
+    background-color: rgb(200, 25, 25);
 }
 
 /*                              */
@@ -185,6 +209,10 @@ footer {
     width: 100%;
     padding: 10px 0px 15px;
     margin-top: 50px;
+}
+
+#back-to-top {
+    text-decoration: underline;
 }
 
 .copyright {
