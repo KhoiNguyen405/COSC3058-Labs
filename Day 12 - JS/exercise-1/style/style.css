@@ -3,7 +3,10 @@
     font-size:12px;
     width: 400px;
     border: 1px solid;
-    cellpadding: 5px;
+}
+
+#calculator td {
+    padding: 5px;
 }
 
 .headerCell, .footerCell {
