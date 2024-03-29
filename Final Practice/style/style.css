@@ -78,14 +78,14 @@ main h1 {
     text-align: center;
 }
 
-#choose-exe {
+#choose-container {
     display: grid;
     grid-template-columns: 33% 33% 33%;
     gap: 15px;
     margin: 0 12.5%;
 }
 
-#choose-exe div {
+#choose-container div {
     cursor: pointer;
     height: 200px;
     text-align: center;
@@ -96,7 +96,7 @@ main h1 {
     border-radius: 5px;
 }
 
-#choose-exe div:hover {
+#choose-container div:hover {
     background-color: rgb(44, 44, 44);
     border-color: rgba(0,0,0,1);
 }
