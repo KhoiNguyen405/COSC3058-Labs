@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // Event handler for Subscribe form
-    subscribeSection.addEventListener("click", validateSubForm);
+    subscribeSection.addEventListener("click", handleSubForm);
     
     // Event handler for Choose Activity section
     activityChoose.addEventListener("click", displayActivity);
@@ -38,10 +38,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
     /**********  Helper Functions **********/
     // Helper function to handle Subscribe form
-    function validateSubForm(event) {
+    function handleSubForm(event) {
         if (event.target.id === "close-sub-form") {
             subscribeSection.style.display = "none";
+        } 
+
+        if (event.target.id === "submit-form") {
+            validateSubForm();
         }
+    }
+
+    // Helper function to validate user inputs in Subscribe form
+    function validateSubForm() {
+
     }
 
     // Helper function to display chosen activity

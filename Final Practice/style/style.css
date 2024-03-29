@@ -102,7 +102,17 @@ main h1 {
 }
 
 #sub-form, #html-exe, #css-exe, #js-exe {
-    display: none;/* No display by default */
+    display: none; /* No display by default */
+}
+
+#sub-form {
+    width: 60%;
+    height: 500px;
+    margin: 0 auto;
+    padding: 10px;
+    color: rgb(0,0,0);
+    background-color: lightgrey;
+    border: 5px solid rgb(0,0,0);
 }
 
 footer {
