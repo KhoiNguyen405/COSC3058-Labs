@@ -101,18 +101,30 @@ main h1 {
     border-color: rgba(0,0,0,1);
 }
 
-#sub-form, #html-exe, #css-exe, #js-exe {
+#html-exe, #css-exe, #js-exe {
     display: none; /* No display by default */
 }
 
+.activity-container {
+    width: 75%;
+    height: 500px;
+    margin: 0 auto;
+    background-color: lightgrey;
+}
+
 #sub-form {
-    width: 60%;
+    display: none; /* No display by default */
+    width: 50%;
     height: 500px;
     margin: 0 auto;
     padding: 10px;
     color: rgb(0,0,0);
     background-color: lightgrey;
     border: 5px solid rgb(0,0,0);
+}
+
+#other-occupation {
+    display: none;
 }
 
 footer {

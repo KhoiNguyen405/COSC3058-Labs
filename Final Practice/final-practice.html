@@ -37,9 +37,86 @@
             <h1>Subscribe now!</h1>
 
             <form id="subscribe">
+                <div>
+                    <label for="fname">First name</label>
+                    <input type="text" id="fname" name="fname">
+                </div>
 
-                <button id="close-sub-form">Close</button>
-                <button id="submit-form">Subscribe!</button>
+                <div>
+                    <label for="lname">Last name</label>
+                    <input type="text" id="lname" name="lname">
+                </div>
+                
+                <div>
+                    <label for="email">Email address</label>
+                    <input type="email" id="email" name="email">
+                </div>
+
+                <div>
+                    <fieldset>
+                        <legend>Content to Subscribe</legend>
+
+                        <input type="checkbox" id="html-check" name="content">
+                        <label for="html-check"><span class="html-lang">HTML</span></label>
+                        <input type="checkbox" id="css-check" name="content">
+                        <label for="css-check"><span class="css-lang">CSS</span></label>
+                        <input type="checkbox" id="js-check" name="content">
+                        <label for="js-check"><span class="js-lang">JavaScript</span></label>
+                    </fieldset>
+                </div>
+
+                <div id="optional-fields">
+                    <fieldset>
+                        <legend>Optional Fields</legend>
+
+                        <div>
+                            <label for="age">Age</label>
+                            <input type="text" id="age" name="age">
+                        </div>
+
+                        <div>
+                            <fieldset>
+                                <legend>Gender</legend>
+        
+                                <input type="radio" id="male" name="gender">
+                                <label for="male">Male</label>
+                                <input type="radio" id="female" name="gender">
+                                <label for="female">Female</label>
+                                <input type="radio" id="other" name="gender">
+                                <label for="other">Other</label>
+                            </fieldset>
+                        </div>
+
+                        <div>
+                            <label for="occupation-list">Occupation</label>
+                            <select id="occupation-list">
+                                <option>Select Occupation</option>
+                                <option value="student">Student</option>
+                                <option value="teacher">Teacher</option>
+                                <option value="office-worker">Office Worker</option>
+                                <option value="gov-official">Government Official</option>
+                                <option value="healthcare-pro">Healthcare Professional</option>
+                                <option value="unemployed">Unemployed</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div id="other-occupation">
+                            <label for="other-occ">If other, please specify</label>
+                            <input type="text" id="other-occ" name="other-occ">
+                        </div>
+
+                        <div>
+                            <label for="phone-num">Phone</label>
+                            <input type="tel" id="phone-num" name="phone-num">
+                        </div>
+                    </fieldset>
+                </div>
+
+                <div>
+                    <button type="submit" id="submit-form">Subscribe!</button>
+                    <button type="button" id="close-sub-form">Close</button>
+                </div>
             </form>
         </section>
 
@@ -59,18 +136,24 @@
         <!-- HTML activity -->
         <section id="html-exe">
             <h1><span class="html-lang">HTML</span> Exercise</h1>
+
+            <div class="activity-container"></div>
         </section>
 
 
         <!-- CSS Activity -->
         <section id="css-exe">
             <h1><span class="css-lang">CSS</span> Exercise</h1>
+
+            <div class="activity-container"></div>
         </section>
 
 
         <!-- JS Activity -->
         <section id="js-exe">
             <h1><span class="js-lang">JavaScript</span> Exercise</h1>
+            
+            <div class="activity-container"></div>
         </section>
     </main>
 
