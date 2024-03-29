@@ -3,6 +3,7 @@
     --css-color: rgb(0, 195, 255);
     --js-color: rgb(228, 228, 0);
     --div-bg-color: rgb(25, 25, 25);
+    --red-color: rgb(225, 25, 25);
 }
 
 html {
@@ -191,12 +192,20 @@ button {
 #submit-form {
     font-weight: bold;
     color: white;
-    background-color: rgb(225, 25, 25);
+    background-color: var(--red-color);
     border-radius: 2px;
 }
 
 #submit-form:hover {
     background-color: rgb(200, 25, 25);
+}
+
+.error {
+    border: 2px solid var(--red-color);
+}
+
+.error legend {
+    color: var(--red-color);
 }
 
 /*                              */

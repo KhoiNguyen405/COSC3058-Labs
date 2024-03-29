@@ -42,18 +42,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     /**********  Helper Functions **********/
-    // Helper function to get current date in 'yyyy-mm-dd' format
-    function getCurrentDate() {
-        const date = new Date();
-        let currYear = date.getFullYear();
-        let currMonth = date.getMonth() + 1;
-        currMonth = currMonth < 10 ? `0${currMonth}` : currMonth;
-        let currDay = date.getDate();
-
-        return `${currYear}-${currMonth}-${currDay}`;
-    }
-
-
     // Helper function to handle Subscribe form
     function handleSubForm(event) {
         if (event.target.id === "close-sub-form") {
@@ -61,13 +49,110 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         if (event.target.id === "submit-form") {
-            validateSubForm();
+            validateSubForm(event);
         }
     }
 
     // Helper function to validate user inputs in Subscribe form
-    function validateSubForm() {
+    function validateSubForm(event) {
+        // Required fields
+        const fname = document.querySelector("input#fname");
+        const lname = document.querySelector("input#lname");
+        const email = document.querySelector("input#email");
+        const username = document.querySelector("input#username");
+        const password = document.querySelector("input#password");
+        const pwConfirm = document.querySelector("input#pw-confirm");
+        const content = document.querySelectorAll("input[type='checkbox']");
+        const contentField = document.querySelector("fieldset#content-select");
 
+        // Optional fields
+        const dob = document.querySelector("input#dob");
+        const gender = document.querySelectorAll("input[name='gender']");
+        const phone = document.querySelector("input#phone-num");
+
+        // Check fname and lname //
+        if (fname.value.trim().length == 0) {
+            fname.classList.add("error");
+        } else {
+            fname.classList.remove("error");
+        }
+
+        if (lname.value.trim().length == 0) {
+            lname.classList.add("error")
+        } else {
+            lname.classList.remove("error");
+        }
+
+        // Check email
+        if (!validEmail(email.value)) {
+            email.classList.add("error");
+        } else {
+            email.classList.remove("error");
+        }
+
+        // Check username 
+        if (username.value.trim().length == 0) {
+            username.classList.add("error");
+        } else {
+            username.classList.remove("error");
+        }
+
+        // Check password
+        let pw = password.value;
+        let hasUppercase = hasLowercase = hasDigit = validLength = false;
+        if (pw.length == 0 || pw.indexOf(" ") != -1) {
+            validLength = false;
+        } else {
+            // Check password length
+            if (pw.length < 8 || pw.length > 20) {
+                validLength = false;
+            } else {
+                validLength = true;
+            }
+
+            // Check for at least 1 uppercase char, 1 lowercase char and 1 digit
+            for (let char of pw) {
+                if (char === char.toUpperCase()) {
+                    hasUppercase = true;
+                }
+                if (char === char.toLowerCase()) {
+                    hasLowercase = true;
+                }
+                if (!isNaN(char)) {
+                    hasDigit = true;
+                }
+            }
+
+            // Check confirm password matches
+            if (pw != pwConfirm.value) {
+                pwConfirm.classList.add("error");
+            } else {
+                pwConfirm.classList.remove("error");
+            }
+        }
+
+        if (!validLength || !hasUppercase || !hasLowercase || !hasDigit) {
+            password.classList.add("error");
+        } else {
+            password.classList.remove("error");
+        }
+
+        // Check content selection
+        let contentSelected = false;
+        for (let cont of content) {
+            if (cont.checked) {
+                contentSelected = true;
+                break;
+            }
+        }
+
+        if (!contentSelected) {
+            contentField.classList.add("error");
+        } else {
+            contentField.classList.remove("error");
+        }
+
+        event.preventDefault();
     }
 
     // Helper function to display chosen activity
@@ -111,5 +196,23 @@ document.addEventListener("DOMContentLoaded", function () {
                 subSection.style.display = "none";
             }
         }
+    }
+    
+    // Helper function to get current date in 'yyyy-mm-dd' format
+    function getCurrentDate() {
+        const date = new Date();
+        let currYear = date.getFullYear();
+        let currMonth = date.getMonth() + 1;
+        currMonth = currMonth < 10 ? `0${currMonth}` : currMonth;
+        let currDay = date.getDate();
+
+        return `${currYear}-${currMonth}-${currDay}`;
+    }
+
+    // Helper function to check validity of email
+    function validEmail(email) {
+        let pattern = /^([a-zA-Z0-9_.-])+@([a-zA-Z0-9_.-])+\.([a-zA-Z])+([a-zA-Z])+/;
+
+        return pattern.test(email);
     }
 })
