@@ -1,0 +1,119 @@
+:root {
+    --html-color: rgb(255, 150, 0);
+    --css-color: rgb(0, 195, 255);
+    --js-color: rgb(228, 228, 0);
+    --div-bg-color: rgb(25, 25, 25);
+}
+
+html {
+    color: rgb(215, 215, 215);
+    background-color: rgb(50, 50, 50);
+}
+
+body {
+    margin: 0px;
+    width: 100%;
+    position: absolute;
+}
+
+.html-lang {
+    color: var(--html-color) !important;
+}
+
+.css-lang {
+    color: var(--css-color) !important;
+}
+
+.js-lang {
+    color: var(--js-color) !important;
+}
+
+.html-lang, .css-lang, .js-lang {
+    font-weight: bold;
+}
+
+header {
+    text-align: center;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+    margin: 25px 0px;
+    padding: 0px;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--div-bg-color);
+}
+
+.nav-links li {
+    cursor: pointer;
+    list-style: none;
+    width: 20%;
+    height: 95%;
+    text-align: center;
+    align-content: center;
+    color: white;
+    border: 2px solid rgba(0,0,0,0.5);
+}
+
+.nav-links a {
+    display: block;
+    height: 100%;
+    color: white;
+    align-content: center;
+}
+
+.nav-links li:hover {
+    background-color: rgb(44, 44, 44);
+}
+
+main h1 {
+    text-align: center;
+}
+
+#choose-exe {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    gap: 15px;
+    margin: 0 12.5%;
+}
+
+#choose-exe div {
+    cursor: pointer;
+    height: 200px;
+    text-align: center;
+    align-content: center;
+    font-size: 30px;
+    background-color: var(--div-bg-color);
+    border: 3px solid rgba(0,0,0,0.2);
+    border-radius: 5px;
+}
+
+#choose-exe div:hover {
+    background-color: rgb(44, 44, 44);
+    border-color: rgba(0,0,0,1);
+}
+
+#sub-form, #html-exe, #css-exe, #js-exe {
+    display: none;/* No display by default */
+}
+
+footer {
+    text-align: center;
+    background-color: var(--div-bg-color);
+    height: 50px;
+    width: 100%;
+    padding: 10px 0px 15px;
+    margin-top: 50px;
+}
+
+.copyright {
+    margin: 15px;
+}
