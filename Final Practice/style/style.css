@@ -57,6 +57,22 @@ a {
     text-decoration: none;
 }
 
+#change-mode {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+.brightness {
+    cursor: pointer;
+    width: 40px;
+    padding: 5px;
+}
+
+#light-mode {
+    display: none;
+}
+
 /*                              */
 /* Styling for nav link section */
 /*                              */
