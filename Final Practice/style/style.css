@@ -53,7 +53,8 @@ a {
     display: flex;
     flex-direction: row;
     height: 50px;
-    margin: 25px 0px;
+    margin-top: 0px;
+    margin-bottom: 25px;
     padding: 0px;
     justify-content: space-around;
     align-items: center;
@@ -70,6 +71,16 @@ a {
     border: 2px solid rgba(0,0,0,0.5);
 }
 
+#mobile-menu-icon {
+    display: none;
+    cursor: pointer;
+    text-align: center;
+    align-content: center;
+    height: 40px;
+    background-color: var(--div-bg-color);
+    border: 2px solid rgba(0,0,0,0.5);
+}
+
 .subscribe {
     color: var(--red-color);
 }
@@ -81,7 +92,7 @@ a {
     align-content: center;
 }
 
-.nav-links li:hover {
+.nav-links li:hover, #mobile-menu-icon:hover {
     background-color: rgb(44, 44, 44);
 }
 
@@ -233,4 +244,33 @@ footer {
 
 .copyright {
     margin: 15px;
+}
+
+/*                                         */
+/*  Responsive layout for smaller screens  */
+/*                                         */
+@media only screen and (max-width: 768px) {
+    /* Responsive nav link section */
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        height: auto;
+    }
+
+    .nav-links li {
+        height: 40px;
+        width: 100%;
+    }
+
+    #mobile-menu-icon {
+        display: block;
+    }
+
+    #mobile-menu-icon:hover+.nav-links, .nav-links:hover {
+        display: flex;
+    }
+
+    #sub-form {
+        margin-top: 15px;
+    }
 }
