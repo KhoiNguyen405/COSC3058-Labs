@@ -67,8 +67,11 @@ a {
     height: 95%;
     text-align: center;
     align-content: center;
-    color: white;
     border: 2px solid rgba(0,0,0,0.5);
+}
+
+.subscribe {
+    color: var(--red-color);
 }
 
 .nav-links a {
@@ -142,6 +145,14 @@ main h1 {
     margin-bottom: 5px;
 }
 
+#hint {
+    padding-bottom: 0px;
+}
+
+.required-field, .error legend, #error-messages {
+    color: var(--red-color);
+}
+
 #basic-fields {
     padding: 0px 16px !important;
 }
@@ -202,10 +213,6 @@ button {
 
 .error {
     border: 2px solid var(--red-color);
-}
-
-.error legend {
-    color: var(--red-color);
 }
 
 /*                              */

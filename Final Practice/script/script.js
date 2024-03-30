@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const activityChoose = document.querySelector("#choose-exe");
     const copyright = document.querySelectorAll(".copyright");
     const dobSelector = document.querySelector("input#dob");
+    const errorMsgField = document.querySelector("#error-messages");
 
     // Required form fields //
     const fname = document.querySelector("input#fname");
@@ -16,6 +17,18 @@ document.addEventListener("DOMContentLoaded", function () {
     const pwConfirm = document.querySelector("input#pw-confirm");
     const content = document.querySelectorAll("input[type='checkbox']");
     const contentField = document.querySelector("fieldset#content-select");
+
+    // Form error messages //
+    const fnameError = "First name is required";
+    const lnameError = "Last name is required";
+    const emailError = "Invalid email";
+    const usernameError = "Username is required";
+    const pwLengthError = "Password must not contain whitespace and the length must be between 8 and 20 characters";
+    const pwUppercaseError = "Password must contain at least 1 uppercase character";
+    const pwLowercaseError = "Password must contain at least 1 lowercase character";
+    const pwDigitError = "Password must contain at least 1 digit";
+    const pwConfirmError = "Passwords do not match";
+    const contentFieldError = "Please choose at least 1 content to subscribe";
 
     console.log("Script start");
 
@@ -57,6 +70,16 @@ document.addEventListener("DOMContentLoaded", function () {
     // Helper function to handle Subscribe form
     function handleSubForm(event) {
         if (event.target.id === "close-sub-form") {
+            // Reset error messages
+            errorMsgField.innerHTML = "";
+            fname.classList.remove("error");
+            lname.classList.remove("error");
+            email.classList.remove("error");
+            username.classList.remove("error");
+            password.classList.remove("error");
+            pwConfirm.classList.remove("error");
+            contentField.classList.remove("error");
+
             subscribeSection.style.display = "none";
         }
 
@@ -70,31 +93,41 @@ document.addEventListener("DOMContentLoaded", function () {
         // Prevent default action
         event.preventDefault();
 
-        // Check fname and lname //
+        let errorMsgs = [];
+
+        // Check fname and lname
         if (fname.value.trim().length == 0) {
             fname.classList.add("error");
+            errorMsgs.push(fnameError);
         } else {
             fname.classList.remove("error");
+            removeError(errorMsgs, fnameError);
         }
 
         if (lname.value.trim().length == 0) {
-            lname.classList.add("error")
+            lname.classList.add("error");
+            errorMsgs.push(lnameError);
         } else {
             lname.classList.remove("error");
+            removeError(errorMsgs, lnameError);
         }
 
         // Check email
         if (!validEmail(email.value)) {
             email.classList.add("error");
+            errorMsgs.push(emailError);
         } else {
             email.classList.remove("error");
+            removeError(errorMsgs, emailError);
         }
 
         // Check username 
         if (username.value.trim().length == 0) {
             username.classList.add("error");
+            errorMsgs.push(usernameError);
         } else {
             username.classList.remove("error");
+            removeError(errorMsgs, usernameError);
         }
 
         // Check password
@@ -122,19 +155,44 @@ document.addEventListener("DOMContentLoaded", function () {
                     hasDigit = true;
                 }
             }
-
-            // Check confirm password matches
-            if (pw != pwConfirm.value) {
-                pwConfirm.classList.add("error");
-            } else {
-                pwConfirm.classList.remove("error");
-            }
         }
 
-        if (!validLength || !hasUppercase || !hasLowercase || !hasDigit) {
+        if (!validLength) {
             password.classList.add("error");
+            errorMsgs.push(pwLengthError);
         } else {
             password.classList.remove("error");
+            removeError(errorMsgs, pwLengthError);
+        }
+        if (!hasUppercase) {
+            password.classList.add("error");
+            errorMsgs.push(pwUppercaseError);
+        } else {
+            password.classList.remove("error");
+            removeError(errorMsgs, pwUppercaseError);
+        }
+        if (!hasLowercase) {
+            password.classList.add("error");
+            errorMsgs.push(pwLowercaseError);
+        } else {
+            password.classList.remove("error");
+            removeError(errorMsgs, pwLowercaseError);
+        }
+        if (!hasDigit) {
+            password.classList.add("error");
+            errorMsgs.push(pwDigitError);
+        } else {
+            password.classList.remove("error");
+            removeError(errorMsgs, pwDigitError);
+        }
+
+        // Check confirm password matches
+        if (pw != pwConfirm.value) {
+            pwConfirm.classList.add("error");
+            errorMsgs.push(pwConfirmError);
+        } else {
+            pwConfirm.classList.remove("error");
+            removeError(errorMsgs, pwConfirmError);
         }
 
         // Check content selection
@@ -148,19 +206,32 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (!contentSelected) {
             contentField.classList.add("error");
+            errorMsgs.push(contentFieldError);
         } else {
             contentField.classList.remove("error");
+            removeError(errorMsgs, contentFieldError);
         }
 
         // Display validation result
-        displayValidationResult();
+        displayValidationResult(errorMsgs);
     }
 
     // Helper function to display form validation result
-    function displayValidationResult() {
-        // Case: form has error
+    function displayValidationResult(errorMsgs) {
+        // Clear error message field
+        errorMsgField.innerHTML = "";
 
-        // Case: form has no error
+        if (errorMsgs.length > 0) {
+            let errorList = document.createElement("ul");
+            errorList.classList.add("error-list");
+
+            for (let err of errorMsgs) {
+                let errorItem = document.createElement("li");
+                errorItem.appendChild(document.createTextNode(err));
+                errorList.appendChild(errorItem);
+            }
+            errorMsgField.appendChild(errorList);
+        }
     }
 
     // Helper function to display chosen activity
@@ -222,5 +293,14 @@ document.addEventListener("DOMContentLoaded", function () {
         let pattern = /^([a-zA-Z0-9_.-])+@([a-zA-Z0-9_.-])+\.([a-zA-Z])+([a-zA-Z])+/;
 
         return pattern.test(email);
+    }
+
+    // Helper function to remove error message from list
+    function removeError(arr, msg) {
+        let msgIndex = arr.indexOf(msg);
+
+        if (msgIndex != -1) {
+            arr.splice(msgIndex, 1);
+        }
     }
 })

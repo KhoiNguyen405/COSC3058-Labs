@@ -41,17 +41,17 @@
             <form id="subscribe">
                 <div id="basic-fields">
                     <div id="first-name" class="labeled-input">
-                        <label for="fname">First Name</label>
+                        <label for="fname">First Name <span class="required-field">*</span></label>
                         <input type="text" id="fname" name="fname">
                     </div>
 
                     <div id="last-name" class="labeled-input">
-                        <label for="lname">Last Name</label>
+                        <label for="lname">Last Name <span class="required-field">*</span></label>
                         <input type="text" id="lname" name="lname">
                     </div>
 
                     <div id="email-field" class="labeled-input">
-                        <label for="email">Email Address</label>
+                        <label for="email">Email Address <span class="required-field">*</span></label>
                         <input type="email" id="email" name="email">
                     </div>
                 </div>
@@ -61,17 +61,17 @@
                         <legend>User Account</legend>
 
                         <div class="labeled-input">
-                            <label for="username">Username</label>
+                            <label for="username">Username <span class="required-field">*</span></label>
                             <input type="text" id="username" name="username" maxlength="10">
                         </div>
 
                         <div class="labeled-input">
-                            <label for="password">Password</label>
+                            <label for="password">Password <span class="required-field">*</span></label>
                             <input type="password" id="password" nane="password">
                         </div>
 
                         <div class="labeled-input">
-                            <label for="pw-confirm">Confirm Password</label>
+                            <label for="pw-confirm">Confirm Password <span class="required-field">*</span></label>
                             <input type="password" id="pw-confirm" name="pw-confirm">
                         </div>
                     </fieldset>
@@ -79,7 +79,7 @@
 
                 <div id="content-fields">
                     <fieldset id="content-select">
-                        <legend>Content to Subscribe</legend>
+                        <legend>Content to Subscribe <span class="required-field">*</span></legend>
 
                         <div class="multi-option">
                             <div>
@@ -154,6 +154,12 @@
                     </fieldset>
                 </div>
 
+                <div id="hint">
+                    <span class="required-field">*</span> indicates a required field.
+                </div>
+
+                <div id="error-messages"></div>
+
                 <div id="buttons">
                     <button type="submit" id="submit-form">Subscribe!</button>
                     <button type="reset" id="close-sub-form">Close</button>
@@ -176,7 +182,7 @@
 
         <!-- HTML activity -->
         <section id="html-exe">
-            <h1><span class="html-lang">HTML</span> Exercise</h1>
+            <h1><span class="html-lang">HTML</span> Activity</h1>
 
             <div class="activity-container"></div>
         </section>
@@ -184,7 +190,7 @@
 
         <!-- CSS Activity -->
         <section id="css-exe">
-            <h1><span class="css-lang">CSS</span> Exercise</h1>
+            <h1><span class="css-lang">CSS</span> Activity</h1>
 
             <div class="activity-container"></div>
         </section>
@@ -192,7 +198,7 @@
 
         <!-- JS Activity -->
         <section id="js-exe">
-            <h1><span class="js-lang">JavaScript</span> Exercise</h1>
+            <h1><span class="js-lang">JavaScript</span> Activity</h1>
 
             <div class="activity-container"></div>
         </section>
