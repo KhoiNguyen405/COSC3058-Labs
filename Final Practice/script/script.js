@@ -222,6 +222,7 @@ document.addEventListener("DOMContentLoaded", function () {
         errorMsgField.innerHTML = "";
 
         if (errorMsgs.length > 0) {
+            // Form has error
             let errorList = document.createElement("ul");
             errorList.classList.add("error-list");
 
@@ -231,6 +232,11 @@ document.addEventListener("DOMContentLoaded", function () {
                 errorList.appendChild(errorItem);
             }
             errorMsgField.appendChild(errorList);
+        } else {
+            // Form is valid
+            let successMsg = `Success! Thank you for subscribing ${fname.value} ${lname.value}. `
+            successMsg += `A confirmation email will be sent to your email at ${email.value} shortly.`;
+            alert(successMsg);
         }
     }
 
