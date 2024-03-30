@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     // Useful DOM element selectors //
+    const htmlSelector = document.querySelector("html");
     const navLinks = document.querySelector(".nav-links")
     const mainSection = document.querySelector("main");
     const subscribeSection = document.querySelector("#sub-form");
@@ -7,6 +8,11 @@ document.addEventListener("DOMContentLoaded", function () {
     const copyright = document.querySelectorAll(".copyright");
     const dobSelector = document.querySelector("input#dob");
     const errorMsgField = document.querySelector("#error-messages");
+    const changeMode = document.querySelector("#change-mode");
+    const darkMode = document.querySelector("#dark-mode");
+    const lightMode = document.querySelector("#light-mode");
+    const activityDivs = document.querySelector("#choose-container").children;
+    const footer = document.querySelector("footer");
 
     // Required form fields //
     const fname = document.querySelector("input#fname");
@@ -64,6 +70,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Event handler for Choose Activity section
     activityChoose.addEventListener("click", displayActivity);
+
+    // Event handler for Dark/Light mode switching
+    changeMode.addEventListener("click", changeBrightness);
 
 
     /**********  Helper Functions **********/
@@ -307,6 +316,47 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (msgIndex != -1) {
             arr.splice(msgIndex, 1);
+        }
+    }
+
+    // Helper function to change between dark/light mode
+    function changeBrightness(event) {
+        // Dark mode colors
+        const darkBgColor = "var(--dark-bg-color)";
+        const darkDivColor = "var(--dark-div-bg-color)";
+        const darkDivHoverColor = "var(--dark-div-hover-color)";
+        const darkFontColor = "var(--dark-font-color)";
+
+        // Light mode colors
+        const lightBgColor = "var(--light-bg-color)";
+        const lightDivColor = "var(--light-div-bg-color)";
+        const lightDivHoverColor = "var(--light-div-hover-color)";
+        const lightFontColor = "var(--light-font-color)";
+        
+        if (event.target.id === "dark-mode") {
+            // Change from dark -> light
+            darkMode.style.display = "none";
+            lightMode.style.display = "inline";
+            htmlSelector.style.color = lightFontColor;
+            htmlSelector.style.backgroundColor = lightBgColor;
+            navLinks.style.backgroundColor = lightDivColor;
+            for (let div of activityDivs) {
+                div.style.backgroundColor = lightDivColor;
+            }
+            footer.style.backgroundColor = lightDivColor;
+        }
+
+        if (event.target.id === "light-mode") {
+            // Change from light -> dark
+            lightMode.style.display = "none";
+            darkMode.style.display = "inline";
+            htmlSelector.style.color = darkFontColor;
+            htmlSelector.style.backgroundColor = darkBgColor;
+            navLinks.style.backgroundColor = darkDivColor;
+            for (let div of activityDivs) {
+                div.style.backgroundColor = darkDivColor;
+            }
+            footer.style.backgroundColor = darkDivColor;
         }
     }
 })
